@@ -1,3 +1,5 @@
+
+
 drop schema if exists bankdb;
 
 create schema bankdb;
@@ -11,7 +13,7 @@ CREATE TABLE users (
 	phone_number VARCHAR(255) NOT NULL,
 	created_at DATETIME NOT NULL,
 	updated_at DATETIME NOT NULL,
-	created_by DATETIME NOT NULL,
+    created_by VARCHAR(255) NOT NULL,
 	PRIMARY KEY (id)
 );
 
@@ -35,6 +37,7 @@ CREATE TABLE loans (
 CREATE TABLE credit_expenses (
 	id INT NOT NULL AUTO_INCREMENT,
 	owner INT NOT NULL,
+    expense_amount INT NOT NULL,
 	created_at DATETIME NOT NULL,
 	PRIMARY KEY (id)
 );

@@ -2,7 +2,6 @@ package com.alfa.bank.controllers;
 
 
 import com.alfa.bank.models.CreditExpenses;
-import com.alfa.bank.models.User;
 import com.alfa.bank.services.CreditService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ import java.util.Optional;
 
 @Slf4j
 @RestController
-@RequestMapping("/creditExpenses")
+@RequestMapping("/api/creditExpenses")
 public class CreditExpensesController {
 
 

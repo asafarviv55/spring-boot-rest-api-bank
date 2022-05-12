@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Slf4j
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 public class UserController {
 
     @Autowired
@@ -20,10 +20,7 @@ public class UserController {
 
 
    @GetMapping( "/{id}")
-    public Optional<User> getUser(@PathVariable long id) {
-        log.info("getUser called");
-        return userService.getUserById(id);
-    }
+    public Optional<User> getUser(@PathVariable long id) {   log.info("getUser called");  return userService.getUserById(id);  }
 
     @GetMapping("/list")
     public List<User> list() {
