@@ -31,6 +31,9 @@ public class User {
     private String email;
     private Timestamp created_at;
 
+
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
