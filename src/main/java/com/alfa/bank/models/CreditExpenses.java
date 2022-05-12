@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.GeneratorType;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -18,10 +19,11 @@ import java.util.Objects;
 public class CreditExpenses {
 
     @Id
+    @GeneratedValue (strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Integer id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name="owner", referencedColumnName = "id")
     private User owner;
 

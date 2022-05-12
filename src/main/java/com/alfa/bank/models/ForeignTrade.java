@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Table(name = "foreign_trade")
 public class ForeignTrade {
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "id")
     private Integer id;
 

@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Table(name = "pass_back_operations")
 public class PassBackOperations {
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "id")
     private Integer id;
 
