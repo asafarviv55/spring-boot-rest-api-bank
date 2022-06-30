@@ -7,7 +7,7 @@ create schema bankdb;
 use bankdb;
 
 CREATE TABLE users (
-	id INT NOT NULL AUTO_INCREMENT,
+	id bigint NOT NULL AUTO_INCREMENT,
 	email VARCHAR(255) NOT NULL,
 	birth_date DATETIME NOT NULL,
 	phone_number VARCHAR(255) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE users_auth (
-	id INT NOT NULL AUTO_INCREMENT,
+	id bigint NOT NULL AUTO_INCREMENT,
 	owner INT NOT NULL,
 	username VARCHAR(255) NOT NULL,
 	password VARCHAR(50) NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE users_auth (
 );
 
 CREATE TABLE loans (
-	id INT NOT NULL AUTO_INCREMENT,
+	id bigint NOT NULL AUTO_INCREMENT,
 	owner INT NOT NULL ,
 	loan_balance INT NOT NULL,
 	created_at DATETIME NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE loans (
 );
 
 CREATE TABLE credit_expenses (
-	id INT NOT NULL AUTO_INCREMENT,
+	id bigint NOT NULL AUTO_INCREMENT,
 	owner INT NOT NULL,
     expense_amount INT NOT NULL,
 	created_at DATETIME NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE credit_expenses (
 );
 
 CREATE TABLE pass_back_operations (
-	id INT NOT NULL AUTO_INCREMENT,
+	id bigint NOT NULL AUTO_INCREMENT,
 	owner INT NOT NULL ,
 	isCharge BOOLEAN NOT NULL,
 	account_balance FLOAT NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE pass_back_operations (
 );
 
 CREATE TABLE foreign_Trade (
-	id INT NOT NULL AUTO_INCREMENT,
+	id bigint NOT NULL AUTO_INCREMENT,
 	PRIMARY KEY (id)
 );
 
